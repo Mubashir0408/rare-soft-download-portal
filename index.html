@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rare Soft – Software Development Service Provider</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAVBAR
+  ══════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <!-- SVG logo injected by JS -->
+        <div class="nav-logo-svg" style="width:40px;height:40px;flex-shrink:0"></div>
+        <span class="logo-text-nav">Rare Soft</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="document.getElementById('download').scrollIntoView({behavior:'smooth'})">
+        Download Software
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+
+    <!-- Large RS logo watermark bottom-right -->
+    <div id="heroWatermarkLogo" style="
+      position:absolute;right:-4%;bottom:-6%;
+      width:clamp(380px,48vw,640px);
+      opacity:0.055;pointer-events:none;user-select:none;
+    "></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">A Software Development Service Provider</p>
+      <h1 class="hero-title">
+        Powerful Software<br/>
+        <span class="hero-title-accent">Built for Business.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Rare Soft delivers reliable, professional-grade software solutions for businesses across Karachi and beyond. Trusted since day one.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('download').scrollIntoView({behavior:'smooth'})">
+          Download Now
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Contact Us
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating badge -->
+    <div class="hero-badge">
+      <div class="badge-ring">
+        <span>Based in</span>
+        <strong>Karachi</strong>
+        <span>Pakistan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FEATURES
+  ══════════════════════════════ -->
+  <section class="features" id="features">
+    <!-- Subtle RS watermark text behind cards -->
+    <div class="features-bg-mark">RS</div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Why Choose Us</p>
+        <h2 class="section-title">Built with Precision,<br/>Delivered with Excellence</h2>
+      </div>
+      <!-- Feature cards injected by script.js -->
+      <div class="features-grid" id="featuresGrid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       DOWNLOAD / PRODUCT  (single)
+  ══════════════════════════════ -->
+  <section class="products" id="download">
+
+    <!-- Big logo watermark centered behind card -->
+    <div id="productsWatermarkLogo" style="
+      position:absolute;
+      left:50%;top:50%;transform:translate(-50%,-50%);
+      width:clamp(300px,38vw,520px);
+      opacity:0.042;pointer-events:none;user-select:none;
+    "></div>
+
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-tag">Our Software</p>
+        <h2 class="section-title">Download Our Product</h2>
+        <p class="section-desc">Professional-grade software engineered for real-world business performance.</p>
+      </div>
+      <!-- Single product card injected by script.js -->
+      <div class="product-wrap" id="productWrap"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CONTACT
+  ══════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Get In Touch</p>
+        <h2 class="section-title">We're Here to Help</h2>
+      </div>
+      <div class="contact-layout">
+        <!-- Contact info injected by script.js -->
+        <div class="contact-info" id="contactInfo"></div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="e.g. Ahmed Khan" id="formName"/>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@example.com" id="formEmail"/>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="How can we help you?" id="formMessage"></textarea>
+          </div>
+          <button type="submit" class="btn-primary full">Send Message</button>
+          <p class="form-success" id="formSuccess">✓ Message sent! We'll be in touch soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo" style="display:flex;align-items:center;gap:.7rem;margin-bottom:1rem">
+            <div class="footer-logo-svg" style="width:38px;height:38px;flex-shrink:0"></div>
+            <span class="footer-logo-text">Rare Soft</span>
+          </div>
+          <p>A Software Development Service Provider based in Karachi, Pakistan.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>66 Sector-C, Street No.-7<br/>Gazali Road, Manzoor Colony</p>
+          <p style="margin-top:.5rem">Karachi, Pakistan</p>
+          <p style="margin-top:.5rem">Phone: 021-8461053</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rare Soft. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

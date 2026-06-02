@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a80b8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a4a7a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a5a8c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e2e4a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer teardrop/crescent arc — thin stroke only -->
+  <!-- Large outer arc going from top-left around to bottom -->
+  <path d="M 60 25
+             A 95 95 0 1 1 58 196"
+        fill="none"
+        stroke="url(#arcGrad)"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <!-- Inner subtle arc parallel -->
+  <path d="M 68 35
+             A 82 82 0 1 1 66 186"
+        fill="none"
+        stroke="url(#arcGrad)"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.4"/>
+
+  <!-- R letter -->
+  <g fill="url(#rsGrad)">
+    <!-- R vertical stem -->
+    <rect x="42" y="72" width="14" height="72" rx="3"/>
+    <!-- R top bowl -->
+    <path d="M 56 72 Q 90 72 90 95 Q 90 116 56 118 L 56 72 Z" rx="4"/>
+    <!-- R bowl inner cutout -->
+    <path d="M 58 82 Q 78 82 78 95 Q 78 106 58 108 Z" fill="white" opacity="0.95"/>
+    <!-- R leg/diagonal -->
+    <path d="M 60 116 L 90 144 L 80 144 L 52 118 Z"/>
+  </g>
+
+  <!-- S letter -->
+  <g fill="url(#rsGrad)">
+    <!-- S top curve -->
+    <path d="M 130 76 Q 160 68 165 88 Q 169 104 140 110 Q 118 115 118 130 Q 118 148 148 148 Q 165 148 172 138 L 172 148 Q 162 158 142 158 Q 108 158 106 132 Q 104 112 134 106 Q 162 100 158 86 Q 154 74 128 76 Z"/>
+  </g>
+
+  <!-- Bottom double rule lines -->
+  <line x1="30" y1="185" x2="190" y2="185" stroke="#3a5a8c" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="30" y1="191" x2="190" y2="191" stroke="#3a5a8c" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- RARE SOFT text below -->
+  <text x="110" y="209"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="16"
+        font-weight="bold"
+        letter-spacing="4"
+        fill="#1e2e4a"
+        text-anchor="middle">RARE SOFT</text>
+</svg>
